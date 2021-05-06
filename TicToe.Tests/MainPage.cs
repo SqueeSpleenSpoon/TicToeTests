@@ -7,22 +7,97 @@ namespace TicToe.Tests
     {
         private readonly IWebDriver _webDriver;
 
-        private static readonly By _score = By.CssSelector("[class^=scores]");
         private static readonly By _swap = By.CssSelector("[class^=swap]");
-        private static readonly By _twoPlayers = By.CssSelector("p[class^=p2]");
+
+        private static readonly By _square_1_1 = By.CssSelector("[class='square top left']");
+        private static readonly By _square_2_1 = By.CssSelector("[class='square top']");    
+        private static readonly By _square_3_1 = By.CssSelector("[class='square top right']");
+
+        private static readonly By _square_1_2 = By.CssSelector("[class='square left']");
+        private static readonly By _square_2_2 = By.CssSelector("[class='square']");
+        private static readonly By _square_3_2 = By.CssSelector("[class='square right']");
+
+        private static readonly By _square_1_3 = By.CssSelector("[class='square bottom left']");
+        private static readonly By _square_2_3 = By.CssSelector("[class='square bottom']");
+        private static readonly By _square_3_3 = By.CssSelector("[class='square bottom right']");
+
+        public static readonly By NumberOfPlayers1 = By.CssSelector("p[class^=p1]");
+        public static readonly By NumberOfPlayers2 = By.CssSelector("p[class^=p2]");
+
+        public static readonly By XMark = By.CssSelector("div[class=x]");
+
+        public static readonly By FirstPlayerWins = By.CssSelector("[class=player1] span[class='score appear']");
+        public static readonly By SecondPlayerWins = By.CssSelector("[class=player2] span[class='score appear']");
+
 
         public MainPage(IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }
+
         public MainPage OpenMainPage()
         {
             _webDriver.Navigate().GoToUrl("https://playtictactoe.org/");
             return this;
         }
-        public MainPage SwapPayersNumber()
+
+        public MainPage SwapNumberOfPlayers()
         {
             _webDriver.FindElement(_swap).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_1_1()
+        {
+            _webDriver.FindElement(_square_1_1).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_2_1()
+        {
+            _webDriver.FindElement(_square_2_1).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_3_1()
+        {
+            _webDriver.FindElement(_square_3_1).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_1_2()
+        {
+            _webDriver.FindElement(_square_1_2).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_2_2()
+        {
+            _webDriver.FindElement(_square_2_2).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_3_2()
+        {
+            _webDriver.FindElement(_square_3_2).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_1_3()
+        {
+            _webDriver.FindElement(_square_1_3).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_2_3()
+        {
+            _webDriver.FindElement(_square_2_3).Click();
+            return this;
+        }
+
+        public MainPage MarkSquere_3_3()
+        {
+            _webDriver.FindElement(_square_3_3).Click();
             return this;
         }
     }
