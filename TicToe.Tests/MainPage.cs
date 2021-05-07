@@ -35,7 +35,6 @@ namespace TicToe.Tests
         public static readonly By Draws = By.CssSelector("[class=ties] span[class='score appear']");
 
 
-
         public MainPage(IWebDriver webDriver)
         {
             _webDriver = webDriver;
@@ -117,5 +116,4 @@ namespace TicToe.Tests
             _webDriver.FindElement(_neaveButton).Click();
             return this;
         }
-    }
 }
