@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace TicToe.Tests
 {
-    public class MainPage
+    internal class MainPage
     {
         private readonly IWebDriver _webDriver;
 

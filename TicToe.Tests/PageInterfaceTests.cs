@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TicToe.Tests
 {
-    class PageInterfaceTests : SetUpsAndTearDownForTests
+    internal class PageInterfaceTests : SetUpsAndTearDownForTests
     {
         [Test]
         public void SoundOff()

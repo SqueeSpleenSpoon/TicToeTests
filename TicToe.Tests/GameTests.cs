@@ -13,7 +13,7 @@ using WebDriverManager.Helpers;
 
 namespace TicToe.Tests
 {
-    class GameTests : SetUpsAndTearDownForTests
+    internal class GameTests : SetUpsAndTearDownForTests
     {
           
         [Test]
